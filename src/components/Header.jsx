@@ -6,6 +6,7 @@ import AppContext from '../context/AppContext.js';
 import menu from  '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCar from '@icons/icon_shopping_cart.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [toggle, setToggle] = React.useState(false);
@@ -22,23 +23,24 @@ const Header = () => {
             <div className="navbar-left">
                 <img src={logo} alt="logo" className="nav-logo" />
                 <ul>
+                    
                     <li>
-                        <a href="/">All</a>
+                      <Link to="/">All</Link>
                     </li>
                     <li>
-                        <a href="/">Clothes</a>
+                        <Link to="/c/clothes">Clothes</Link>
                     </li>
                     <li>
-                        <a href="/">Electronics</a>
+                        <Link to="/c/electronics">Electronics</Link>
                     </li>
                     <li>
-                        <a href="/">furnitures</a>
+                        <Link to="/c/furnitures">furnitures</Link>
                     </li>
                     <li>
-                        <a href="/">Toys</a>
+                        <Link to="/c/toys">Toys</Link>
                     </li>
                     <li>
-                        <a href="/">Other</a>
+                        <Link to="/c/others">Other</Link>
                     </li>
                 </ul>
             </div>

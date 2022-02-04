@@ -1,5 +1,6 @@
 import React from 'react';
 import '@styles/Login.scss';
+import { Link } from 'react-router-dom';
 
 import logo from '@logos/logo_yard_sale.svg';
 
@@ -22,16 +23,19 @@ const Login = ()=>{
                 <img src={logo} alt="logo" className="logo" />
                 <form action="" className="form" ref={form}>
                     <label htmlFor="email" className="label">Email address</label>
-                    <input type="text" name="email" className="input input-email" placeholder="juan1diego3@gmail.com" />
+                    <input type="text" name="email" className="input input-email" placeholder="tucorreo@algo.com" />
             
                     <label htmlFor="password" className="label">Password</label>
                     <input type="password"name="password" className="input input-password" placeholder="*****" />
 
+                    <Link to="/">
                     <button 
                         className="primary-button login-button" 
-                        onClick={handleSubmit}>
+                       // onClick={handleSubmit}
+                       >
                             Log in
                         </button>
+                    </Link>
                         <a href="/">Forgot my password</a>
                 </form>
                 <button className="secondary-button signin-button">

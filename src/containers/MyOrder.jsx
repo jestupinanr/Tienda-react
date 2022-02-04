@@ -2,18 +2,13 @@ import React from 'react';
 import OrderItem from '@components/OrderItem.jsx';
 import AppContext from '../context/AppContext.js';
 import '@styles/MyOrder.scss';
+import { Link } from 'react-router-dom';
 
 import arrow from '@icons/flechita.svg';
 
 const MyOrder = () => {
 
-	const { state } = React.useContext(AppContext);
-	
-	const sumTotal = ()=>{
-		const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
-		const sum = state.cart.reduce(reducer, 0);
-		return sum;
-	}
+	const { state, sumTotalCart } = React.useContext(AppContext);
 
 	return (
 		<aside className="MyOrder">
@@ -30,11 +25,13 @@ const MyOrder = () => {
 					<p>
 						<span>Total</span>
 					</p>
-					<p>${sumTotal()}</p>
+					<p>${sumTotalCart()}</p>
 				</div>
-				<button className="primary-button">
-					Checkout
-				</button>
+				<Link to="/checkout">
+					<button className="primary-button">
+						Checkout
+					</button>
+				</Link>
 			</div>
 		</aside>
 	);

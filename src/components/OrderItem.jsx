@@ -1,7 +1,6 @@
 import React from "react";
 import '@styles/OrderItem.scss';
 import AppContext from "../context/AppContext.js";
-
 import close from '@icons/icon_close.png';
 
 const Orderitem = ({ product })=>{
@@ -18,7 +17,7 @@ const Orderitem = ({ product })=>{
             </figure>
             <p>{product.title}</p>
             <p>${product.price}</p>
-            <img src={close} alt="close" onClick={()=> handleRemove(product)}/>
+            <img src={close} className="deleteItem" alt="close" onClick={()=> handleRemove(product)}/>
         </div>
     );
 }

@@ -1,15 +1,12 @@
 import React from "react";
-
 import ProducList from "@containers/ProductList.jsx";
 
-const Home = ()=>{
+const Clothes = ()=>{
     return(
         <>
-            <ProducList category="0"/> 
+            <ProducList category="1"/> 
         </>
-       
-      
-    );
-}
+    )
+};
 
-export default Home;
+export default Clothes;

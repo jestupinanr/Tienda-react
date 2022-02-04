@@ -13,6 +13,11 @@ import CreateAccount from '@pages/ProfileCreate.jsx';
 import Orders from '@pages/Orders.jsx';
 import AppContext from '../context/AppContext.js';
 import useInitialState from '../hooks/useInitialState.js';
+import Clothes from '../pages/Clothes.jsx';
+import Electronics from '../pages/Electronics.jsx';
+import Fornitures from '../pages/Fornitures.jsx';
+import Toys from '../pages/Toys.jsx';
+import Others from '../pages/Others.jsx';
 
 const App = ()=>{
     const initialState = useInitialState();
@@ -29,6 +34,12 @@ const App = ()=>{
                         <Route exact path="/signup" element={<CreateAccount/>}/>
                         <Route exact path="/checkout" element={<Checkout/>}/>
                         <Route exact path="/orders" element={<Orders/>}/>
+                        //rutas de categorias
+                        <Route exact path="/c/clothes" element={<Clothes />}/>
+                        <Route exact path="/c/electronics" element={<Electronics />}/>
+                        <Route exact path="/c/furnitures" element={<Fornitures />}/>
+                        <Route exact path="/c/toys" element={<Toys />}/>
+                        <Route exact path="/c/others" element={<Others />}/>
                         <Route element={<NotFound />} />
                     </Routes>
                 </Layout>

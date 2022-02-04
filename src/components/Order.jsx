@@ -3,14 +3,16 @@ import '@styles/Order.scss';
 
 import arrow from '@icons/flechita.svg';
 
-const Order = () => {
+const Order = ({ order, key }) => {
+	console.log(order);
+
 	return (
 		<div className="Order">
 			<p>
 				<span>03.25.21</span>
-				<span>6 articles</span>
+				<span>{order.items.length} articles</span>
 			</p>
-			<p>$560.00</p>
+			<p>${order.total}</p>
 			<img src={arrow} alt="arrow" />
 		</div>
 	);
